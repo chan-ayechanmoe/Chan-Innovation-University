@@ -1,4 +1,4 @@
-﻿
+
 body {
     position: relative;
 }
@@ -85,16 +85,29 @@ footer p {
 .btn-group {
     display:flex;
 }
+.btn-search {
+    border: 1px solid #a40a0a;
+    color: #a40a0a;
+    margin-right: 5px;
+    border-radius: 5px;
+    width: 60px;
+    text-align: center;
+}
+.btn-search:hover {
+    background: #a40a0a;
+    color: #fff;
+    text-decoration: none;
+}
 .btn-group a {
-   display: block;
-        padding: 5px;
-        border: 1px solid #a40a0a;
-        color: #a40a0a;
-        margin-right: 5px;
-        border-radius: 5px;
-        width: 60px;
-        text-align: center;
-    }
+    display: block;
+    padding: 5px;
+    border: 1px solid #a40a0a;
+    color: #a40a0a;
+    margin-right: 5px;
+    border-radius: 5px;
+    width: 60px;
+    text-align: center;
+}
 .btn-link a {
     display: block;
     width: 100px;
