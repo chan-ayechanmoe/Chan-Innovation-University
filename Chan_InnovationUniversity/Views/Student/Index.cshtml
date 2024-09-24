@@ -1,4 +1,4 @@
-﻿@model IEnumerable<Chan_InnovationUniversity.Models.Student>
+@model IEnumerable<Chan_InnovationUniversity.Models.Student>
 
 @{
     ViewBag.Title = "Index";
@@ -8,16 +8,24 @@
 <p class="btn-link">
     @Html.ActionLink("Create New", "Create")
 </p>
+@using (Html.BeginForm())
+{
+    <p>
+        Find by name: @Html.TextBox("SearchString")
+        <input type="submit" value="Search" class="btn-search"/>
+    </p>
+}
+
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.LastName)
+            @Html.ActionLink("Last Name", "Index", new { sortOrder = ViewBag.LastNameSortParm })
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.FirstMidName)
+            @Html.ActionLink("First Name", "Index", new { sortOrder = ViewBag.FirstNameSortParm })
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.EnrollmentDate)
+            @Html.ActionLink("Enrollment Date", "Index", new { sortOrder = ViewBag.DateSortParm })
         </th>
         <th></th>
     </tr>
